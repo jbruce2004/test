@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platte Valley Roleplay - Rules</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Logo and Server Name -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Platte Valley Roleplay Logo">
+        </div>
+        <h1>Platte Valley Roleplay</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rules.html">Rules</a></li>
+        </ul>
+    </nav>
+
+    <!-- Rules Section -->
+    <section id="rules">
+        <h2>Server Rules</h2>
+        
+        <div class="rule">
+            <button class="dropdown-btn">General Conduct</button>
+            <div class="dropdown-content">
+                <p>1. Respect all members and staff.</p>
+                <p>2. No cheating, hacking, or exploiting.</p>
+                <p>3. Follow roleplay guidelines at all times.</p>
+            </div>
+        </div>
+
+        <div class="rule">
+            <button class="dropdown-btn">In-Game Behavior</button>
+            <div class="dropdown-content">
+                <p>1. No random deathmatching (RDM).</p>
+                <p>2. Avoid out-of-character (OOC) interactions.</p>
+                <p>3. No vehicle deathmatching (VDM).</p>
+            </div>
+        </div>
+
+        <div class="rule">
+            <button class="dropdown-btn">Server Guidelines</button>
+            <div class="dropdown-content">
+                <p>1. Respect server economy.</p>
+                <p>2. Avoid griefing other players.</p>
+                <p>3. Obey all server regulations and guidelines.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Script to toggle dropdown content visibility
+        const dropdowns = document.querySelectorAll('.dropdown-btn');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
