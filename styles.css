@@ -1,127 +1,98 @@
-/* Reset styles */
-* {
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    text-align: center;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
-}
-
-/* Header */
 header {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    padding: 20px;
     display: flex;
     align-items: center;
-    padding: 20px;
-    background: rgba(76, 175, 80, 0.8); /* Semi-transparent green */
-    color: white;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    gap: 10px;
 }
 
-header .logo img {
+.logo img {
     height: 60px;
-    margin-right: 15px;
+    width: auto;
 }
 
-header h1 {
+h1 {
+    margin: 0;
     font-size: 2rem;
-    font-weight: bold;
 }
 
-/* Navigation */
-nav {
-    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent dark gray */
-    padding: 10px 20px;
-    border-radius: 0 0 10px 10px;
-    margin-top: -10px;
-}
-
+/* Navigation Bar */
 nav ul {
     list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    padding: 0;
+    background-color: #34a853;
+    margin: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: inline-block;
     font-weight: bold;
-    background: rgba(76, 175, 80, 0.9);
-    border-radius: 20px;
-    transition: 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: rgba(102, 187, 106, 0.9);
+    background-color: #2d2d2d;
 }
 
-/* Sections */
-section {
-    padding: 30px;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    border-radius: 10px;
+/* Section Styling */
+#home {
+    padding: 40px 20px;
 }
 
-h2 {
-    margin-bottom: 10px;
-    color: #4caf50;
+#home h2 {
+    font-size: 1.8rem;
 }
 
-/* Rules Dropdown */
-.rule {
-    margin-bottom: 15px;
-}
-
-.dropdown-btn {
-    background-color: #4caf50;
-    color: white;
-    padding: 15px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    cursor: pointer;
+#home p {
     font-size: 1rem;
-    font-weight: bold;
-    border-radius: 10px;
-    transition: background 0.3s;
-}
-
-.dropdown-btn:hover {
-    background-color: #66bb6a;
-}
-
-.dropdown-content {
-    display: none;
-    padding: 15px;
-    background-color: #e8f5e9;
     color: #333;
-    border-left: 3px solid #4caf50;
-    border-radius: 0 0 10px 10px;
 }
 
-/* Animation for dropdown */
-.dropdown-btn.active + .dropdown-content {
-    display: block;
-    animation: fadeIn 0.5s;
+/* Server Buttons */
+.server-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.button {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.fivem-button {
+    background-color: #34a853; /* Green for FiveM */
+}
+
+.discord-button {
+    background-color: #5865F2; /* Discord color */
+}
+
+.button:hover {
+    opacity: 0.9;
 }
